@@ -1,0 +1,12 @@
+{
+  "name": "smart-powershell",
+  "version": "1.0.0",
+  "description": "Secure PowerShell execution server with timeout and error capture.",
+  "main": "dist/index.js",
+  "tools": [
+    {
+      "name": "execute_powershell_safely",
+      "description": "Executes a PowerShell script securely with a strict timeout and deep error capture. Prevents terminal hangs and unexpected tool call drops by returning sanitized JSON output."
+    }
+  ]
+}

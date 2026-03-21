@@ -1,0 +1,16 @@
+@startuml
+package "smart-powershell" {
+    class "PowerShell Server" {
+        + execute_powershell_safely(script, timeout_ms)
+    }
+    
+    class "Process Wrapper" {
+        - ChildProcess
+        + createTempFile(script)
+        + spawnPowerShell(tempFile)
+        + monitorTimeout(proc, timeout)
+    }
+    
+    "PowerShell Server" --> "Process Wrapper" : "Uses"
+}
+@enduml
